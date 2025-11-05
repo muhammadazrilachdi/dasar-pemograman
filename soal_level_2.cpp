@@ -1,21 +1,22 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-int main() {
-    int totaldetik;
-    int hari, jam, menit, detik;
+int main()
+{
+    int n, hr, jm, mn, dt, x;
 
-    cout << "Masukkan total detik: ";
-    cin >> totaldetik;
+    cout << "Masukkan jumlah detik: ";
+    cin >> n;
 
-    hari = totaldetik / 86400;
-    jam = (totaldetik % 86400) / 3600;
-    menit = (totaldetik % 3600) / 60;       
-    detik = totaldetik % 60;
+    hr = n / 86400;
+    x = n - hr * 86400;
+    jm = x / 3600;
+    x = x - jm * 3600;
+    mn = x / 60;
+    dt = x - mn * 60;
 
-    cout << "\nHasil Detik" << endl;
-    cout << totaldetik << " Detik = " << hari << " hari, " << jam << " jam, " << menit << " menit, " << detik << " detik" << endl;
+    cout << "\n>> Hasil Konversi <<" << endl;
+    cout << n << " detik = " << hr << " hari " << jm << " jam " << mn << " menit " << dt << " detik" << endl;
 
     return 0;
 }

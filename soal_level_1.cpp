@@ -1,20 +1,20 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-int main() {
-    int totaldetik;
-    int jam, menit, detik;
+int main()
+{
+    int waktu, j, m, s, sisa;
 
-    cout << "Masukkan total detik: ";
-    cin >> totaldetik;
+    cout << "Input total detik: ";
+    cin >> waktu;
 
-    jam = totaldetik / 3600;
-    menit = (totaldetik % 3600) / 60;       
-    detik = totaldetik % 60;
+    j = waktu / 3600;
+    sisa = waktu - j * 3600;
+    m = sisa / 60;
+    s = sisa - m * 60;
 
-    cout << "\nHasil Detik" << endl;
-    cout << totaldetik << " Detik = " << jam << " jam, " << menit << " menit, " << detik << " detik" << endl;
+    cout << "\nKonversi:" << endl;
+    cout << waktu << " detik = " << j << " jam " << m << " menit " << s << " detik" << endl;
 
     return 0;
 }
