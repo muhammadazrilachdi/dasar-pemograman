@@ -5,7 +5,7 @@ int main()
 {
     int waktu, j, m, s, sisa;
 
-    cout << "Input total detik: ";
+    cout << "Masukkan jumlah detik: ";
     cin >> waktu;
 
     j = waktu / 3600;
